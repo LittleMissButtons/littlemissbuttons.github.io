@@ -1,5 +1,14 @@
+:root {
+    --primary: #f5c20c;
+    --secondary: rgb(58, 173, 4);
+    --tertiary: rgb(248, 15, 7);
+    --dk-grey: #333;
+    --max-width: 960px;
+    --spacing: 4rem;
+}
 body {
     font-family: sont-family: Arial, Helvetica, sans-serif;
+    background-color: white;
 }
 
 header {
@@ -13,5 +22,39 @@ header {
 
 h1 {
     font-family: sont-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: var(--spacing);
+    font-size: clamp(3rem, 5vw, 200rem);
+    font-weight: bold;
+    line-height: 1.4em;
+    color: var(--dk-grey);
 }
+
+.primary-theme {
+    position: relative;
+    color: white;
+    background-color: var(--primary);
+    --button-color: white;
+    --button-hover-color: var(--primary);
 }
+
+.about:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--primary);
+    border-right: 100vw solid transparent;
+}
+.photo {
+    border-radius: 1.5rem;
+    width: 60%;
+    filter: grayscale(90%);
+    position: ;
+}
+.photo:hover {
+    filter: none;
+    scale: 10%;
+}
+
