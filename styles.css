@@ -57,6 +57,13 @@ p {
     letter-spacing: .08em;
 }
 
+.p-projects {
+    margin-bottom: 1em;
+    line-height: 1.4em;
+    color: var(--dk-grey);
+    letter-spacing: .08em;
+}
+
 /* helper classes */
 .neutral-theme {
     background-color: white;
@@ -86,9 +93,9 @@ p {
 .button:hover {
     color:  var(--button-hover-color);
     background-color: var(--button-color);
+    transition: all 0.6s ease-in;
+    transform: scale(1.2);
 }
-
-/* specific styles */
 
 .about-name {
     color: var(--primary);
@@ -145,6 +152,9 @@ p {
 }
 
 .photo {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto var(--spacing);
     border-radius: 15rem 2rem 15rem 15rem;
     width: 40%;
     height: 40%;
@@ -152,21 +162,11 @@ p {
 }
 
 .photo:hover {
-    filter: none;
+    filter: grayscale(0%);
     transition: all 0.3s ease-in-out;
     transform: scale(1.2);
 }
 
-.about-img {
-    display: block;
-    max-width: 350px;
-    margin: 0 auto var(--spacing);
-    filter: grayscale(100%);
-}
-
-.about-img:hover {
-    filter: grayscale(0);
-}
 
 blockquote {
     margin-top: var(--spacing); 
@@ -188,7 +188,7 @@ article {
     margin: 0 auto var(--spacing);
 }
 
-.article-img {
+.project-img {
     display: block;
     flex-grow: 0;
     max-width: clamp(100px, 40%, 300px);
