@@ -1,32 +1,67 @@
 :root {
-    --primary: #f5c20c;
-    --secondary: rgb(58, 173, 4);
-    --tertiary: rgb(248, 15, 7);
+    --primary: #FF1493;
+    --secondary: #FFFF60;
+    --tertiary: orange;
     --dk-grey: #333;
     --max-width: 960px;
     --spacing: 4rem;
 }
+
+/* generic styles */
+
 body {
-    font-family: sont-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dk-grey);
+    overflow-x: hidden;
 }
 
 header {
     height: 100vh;
     display: flex;
-    flex-direction: coulmn;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2px;
+    padding: 2rem;
 }
 
 h1 {
-    font-family: sont-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-bottom: var(--spacing);
     font-size: clamp(3rem, 5vw, 200rem);
     font-weight: bold;
     line-height: 1.4em;
     color: var(--dk-grey);
+}
+
+h2 {
+    margin-bottom: var(--spacing);
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+section {
+    padding: var(--spacing);
+}
+
+p {
+    margin-bottom: 1em;
+    line-height: 1.4em;
+    color: white;
+    letter-spacing: .08em;
+}
+
+/* helper classes */
+.neutral-theme {
+    background-color: white;
+    --button-color: var(--primary);
+    --button-hover-color: white;
 }
 
 .primary-theme {
@@ -35,6 +70,62 @@ h1 {
     background-color: var(--primary);
     --button-color: white;
     --button-hover-color: var(--primary);
+}
+
+.button {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--button-color);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--button-color);
+}
+
+.button:hover {
+    color:  var(--button-hover-color);
+    background-color: var(--button-color);
+}
+
+/* specific styles */
+
+.about-name {
+    color: var(--primary);
+}
+
+.header-link {
+    position: relative;
+    display: flex; /* for the arrow */
+    align-items: center; /* for the arrow */
+    justify-content: space-between; /* for the arrow */
+    padding: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-link:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* getting fancy! */
+.header-link::after {
+    content: '';
+    width: 0;
+    height: 0;
+    margin-left: 1rem;
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
+    border-top: .75rem solid var(--primary);
+}
+
+.header-link:hover::after {
+    border-top-color: white;
+}
+
+.about {
+    margin-bottom: 100px;
 }
 
 .about:after {
@@ -47,14 +138,132 @@ h1 {
     border-top: 100px solid var(--primary);
     border-right: 100vw solid transparent;
 }
-.photo {
-    border-radius: 1.5rem;
-    width: 60%;
-    filter: grayscale(90%);
-    position: ;
+
+.about-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
+
+.photo {
+    border-radius: 15rem 2rem 15rem 15rem;
+    width: 40%;
+    height: 40%;
+    filter: grayscale(90%);
+}
+
 .photo:hover {
     filter: none;
-    scale: 10%;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+.about-img {
+    display: block;
+    max-width: 350px;
+    margin: 0 auto var(--spacing);
+    filter: grayscale(100%);
+}
+
+.about-img:hover {
+    filter: grayscale(0);
+}
+
+blockquote {
+    margin-top: var(--spacing); 
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+}
+
+cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+article {
+    display: flex;
+    max-width: var(--max-width);
+    margin: 0 auto var(--spacing);
+}
+
+.article-img {
+    display: block;
+    flex-grow: 0;
+    max-width: clamp(100px, 40%, 300px);
+    margin-left: var(--spacing);
+    object-fit: cover;
+}
+
+.contact {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.contact:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid var(--primary);
+    border-left: 100vw solid transparent;
+}
+
+footer {
+    padding: var(--spacing);
+    text-align: center;
+    background-color: var(--dk-grey);
+    color: white;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    max-width: var(--max-width);
+    margin: 0 auto var(--spacing);
+}
+
+.social-item {
+    margin: 1rem;
+}
+
+.social-link {
+    display: block;
+    width: 60px;
+    height: 60px;
+    font-size: 0px;
+    background: no-repeat;
+    background-size: 60px;
+}
+
+.social-link:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+.linkedin {
+    background-image: url(https://cdn.glitch.com/eff407bc-3fed-446b-ab3f-4ec6f216531a%2Flinkedin.svg?v=1630326267211);
+}
+
+.twitter {
+    background-image: url(https://cdn.glitch.com/eff407bc-3fed-446b-ab3f-4ec6f216531a%2Ftwitter.svg?v=1630326267072);
+}
+
+.github {
+    background-image: url(https://cdn.glitch.com/eff407bc-3fed-446b-ab3f-4ec6f216531a%2Fgithub.svg?v=1630326266914);
+}
+
+
+@media (min-width: 800px) {
+    .about-container {
+        display: flex;
+    }
+
+    .about-text {
+        margin-left: var(--spacing);
+    }
 }
 
