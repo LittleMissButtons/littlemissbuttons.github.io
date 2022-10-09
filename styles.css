@@ -40,10 +40,6 @@ h2 {
     text-transform: uppercase;
 }
 
-h2:last-of-type {
-    margin: 0 0 1.2rem 0;
-}
-
 h3 {
     margin-right: .5rem;
     font-size: 2rem;
@@ -218,19 +214,22 @@ article {
 }
 
 .toolkit {
-    display: block;
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     max-width: var(--max-width);
     margin: 0 auto var(--spacing);
 }
 
 .fa-brands, .fa-solid {
-    margin-inline: 1rem;
+    margin: 1rem;
     color: white;  
 }
 
 .fa-brands:hover, .img-netlify:hover {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
     transform: scale(1.4);
 }
 
