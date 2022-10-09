@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/images/skate.png" type="image/x-icon"><!--copied styling from example-->
+    <script src="https://kit.fontawesome.com/7c3c8ccc14.js" crossorigin="anonymous"></script>
     <title>My Portfolio</title>
 </head>
 <body>
@@ -27,51 +28,50 @@
             </div>    
         </div>
         <!-- Does the blockquote go below the div? It looks seperate on the web page-->
-        <blockquote>"blah blah blah"<br><cite>said some random person</cite></blockquote>
+        <blockquote>"Failure is part of the process"<br><cite>Michelle Obama</cite></blockquote>
+        <p class="p-quote"><br>I like this quote because in coding you will often<br>encounter stages of failure<br>and it is perseverance that makes a coder succeed<br>...that and a little bit of help from Google</p>
         </section>
 <!--Next Section-->
         <section id="projects" class="projects neutral-theme">
             <h2>Projects</h2>
             <article>
-                <h3>My Portfolio</h3>
-                <p class="p-projects">This was my first project made during the FeF classes</p>
-                <img class="project-img" src="/images/project-icon.jpg" alt="screenshot of my first project which was a">
+                <h3 class="h3-projects">My Portfolio</h3>
+                <p class="p-projects">This was my first project made during the Front End Foxes cohort classes. I really enjoyed making this site to show off work that I am proud of. </p>
+                <img class="img-project" src="/images/Portfolio.png" alt="screenshot of my first project which this this Portfolio website">
                 <!-- add link for 'See It Live' and GitHub -->
             </article>
             <article>
-                <h3>Project name</h3>
-                <p class="p-projects">This was my second project made during the FeF classes</p>
-                <img class="project-img" src="/images/project-icon.jpg" alt="screenshot of my second project which was a">
+                <h3 class="h3-projects">Project name</h3>
+                <p class="p-projects">My Terrarium - This project is a demonstation of responsive wed design utilising HTML, CSS and Javascript. This was then deployed to Netlify through my GitHub repositories.</p>
+                <img class="img-project" src="/images/terrarium.png" alt="screenshot of my second project which was a">
                 <!-- add link for 'See It Live' and GitHub -->
             </article>
             <article>
-                <h3>Project name</h3>
+                <h3 class="h3-projects">Project name</h3>
                 <p class="p-projects">This was my third project made during the FeF classes</p>
-                <img class="project-img" src="/images/project-icon.jpg" alt="screenshot of my third project which was a">
+                <img class="img-project" src="/images/project-icon.jpg" alt="screenshot of my third project which was a">
                 <!-- add link for 'See It Live' and GitHub -->
             </article>
+        </section>
+        <section id="toolkit" class="contact about primary-theme">
+        <h2>MY TOOLKIT</h2>
+        <div class="toolkit">
+            <i class="fa-solid fa-code fa-2x"></i><i class="fa-brands fa-html5 fa-4x"></i></a><i class="fa-brands fa-css3-alt fa-4x"></i><i class="fa-brands fa-square-js fa-4x"></i><i class="fa-brands fa-github fa-4x"></i><i class="fa-brands fa-ubuntu fa-4x"></i>
+            <img class="img-netlify" src="/images/netlify2.png"><i class="fa-solid fa-code fa-2x"></i>
+        </div>
         </section>
 <!--Next Section-->            
-        <section id="contact" class="contact primary-theme">
+        <section id="contact" class="contact neutral-theme">
             <h2>Contact</h2>
-            <p>If you'd like to work with me, you can drop me a message!</p>
+            <p class="p-contact">If you'd like to work with me, then I would love to hear from you and so feel free to drop me a message using the link below!</p>
             <a href="mailto:alexispendleton@outlook.com" class="button" aria-label="Send me an email through your default email programme using this link">Email Me</a></p><!-- move link to what looks like a button -->
         </section>
+        <div class="end-right"></div>
     </main>
 <!--Next Section-->
     <footer>
-        <ul class="social">
-            <li class="social-item"> <!-- Should all the classes be the same here such as "social-media"-->
-                <a class="social-link twitter" href="@Lil_MissButtons" aria-label="Check out my Twitter feed by following this link">Twitter</a>
-            </li>
-            <li class="social-item">
-                <a class="social-link github" href="https://github.com/LittleMissButtons" aria-label="Check out my GitHub repositories and details by following this link>GitHub</a>
-            </li>
-            <li class="social-item">
-                <a class="social-link linkedin" href="https://www.linkedin.com/in/alexis-jayne-pendleton" aria-label="Check out my LinkedIn details by following this link">LinkedIn</a>
-            </li>
-        </ul>
-        <p>&copy 2022 - Website design by Alexis Pendleton</p><!-- Portfolio designed by footer text -->
+        <a href="@Lil_MissButtons" aria-label="Check out my Twitter feed by following this link"><i class="fa-brands fa-twitter fa-4x"></i></a><a href="https://github.com/LittleMissButtons" aria-label="Check out my GitHub repositories and details by following this link"><i class="fa-brands fa-github fa-4x"></i></a><a href="https://www.linkedin.com/in/alexis-jayne-pendleton" aria-label="Check out my LinkedIn details by following this link"><i class="fa-brands fa-linkedin fa-4x"></i></a>
+        <p><br></bk>Website design by Alexis Pendleton</p><!-- Portfolio designed by footer text -->
     </footer>    
 </body>
 </html>

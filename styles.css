@@ -4,7 +4,7 @@
     --tertiary: orange;
     --dk-grey: #333;
     --max-width: 960px;
-    --spacing: 4rem;
+    --spacing: 3rem;
 }
 
 /* generic styles */
@@ -40,10 +40,23 @@ h2 {
     text-transform: uppercase;
 }
 
+h2:last-of-type {
+    margin: 0 0 1.2rem 0;
+}
+
 h3 {
-    margin-bottom: 1rem;
+    margin-right: .5rem;
     font-size: 2rem;
     font-weight: bold;
+    width: 25%;
+}
+
+h4 {
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
 }
 
 section {
@@ -57,11 +70,16 @@ p {
     letter-spacing: .08em;
 }
 
+.p-quote {
+    text-align: center;
+}
+
 .p-projects {
-    margin-bottom: 1em;
+    margin-left: 0.5rem;
     line-height: 1.4em;
     color: var(--dk-grey);
     letter-spacing: .08em;
+    width: 50%;
 }
 
 /* helper classes */
@@ -164,7 +182,7 @@ p {
 .photo:hover {
     filter: grayscale(0%);
     transition: all 0.3s ease-in-out;
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
 
@@ -184,16 +202,41 @@ cite {
 
 article {
     display: flex;
+    align-items: center;
     max-width: var(--max-width);
     margin: 0 auto var(--spacing);
 }
 
-.project-img {
+.img-project {
     display: block;
+    margin-left: 1rem;
     flex-grow: 0;
-    max-width: clamp(100px, 40%, 300px);
-    margin-left: var(--spacing);
     object-fit: cover;
+    border-radius: 1rem;
+    width: 40%;
+    height: 30%;
+}
+
+.toolkit {
+    display: block;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto var(--spacing);
+}
+
+.fa-brands, .fa-solid {
+    margin-inline: 1rem;
+    color: white;  
+}
+
+.fa-brands:hover, .img-netlify:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.4);
+}
+
+.img-netlify {
+    width: 4rem;
+    height: 4rem;
 }
 
 .contact {
@@ -212,6 +255,10 @@ article {
     border-left: 100vw solid transparent;
 }
 
+.p-contact {
+    color: #333;
+}
+
 footer {
     padding: var(--spacing);
     text-align: center;
@@ -219,6 +266,10 @@ footer {
     color: white;
 }
 
+.end-right {
+    border-bottom: 100px solid var(--dk-grey);
+    border-left: 100vw solid transparent;
+}
 .social {
     display: flex;
     justify-content: center;
@@ -243,19 +294,6 @@ footer {
     transition: all 0.3s ease-in-out;
     transform: scale(1.2);
 }
-
-.linkedin {
-    background-image: url(https://cdn.glitch.com/eff407bc-3fed-446b-ab3f-4ec6f216531a%2Flinkedin.svg?v=1630326267211);
-}
-
-.twitter {
-    background-image: url(https://cdn.glitch.com/eff407bc-3fed-446b-ab3f-4ec6f216531a%2Ftwitter.svg?v=1630326267072);
-}
-
-.github {
-    background-image: url(https://cdn.glitch.com/eff407bc-3fed-446b-ab3f-4ec6f216531a%2Fgithub.svg?v=1630326266914);
-}
-
 
 @media (min-width: 800px) {
     .about-container {
