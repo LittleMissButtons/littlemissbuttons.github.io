@@ -2,7 +2,7 @@
     --primary:  #85552b;
     --secondary: #eedbca;
     --tertiary: #ac794d;
-    --dk-grey: #333;
+    --dk-grey: rgb(43, 42, 42);
     --max-width: 960px;
     --spacing: 3rem;
 }
@@ -10,7 +10,7 @@
 /* generic styles */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     background-color: var(--secondary);
     color: var(--dk-grey);
     overflow-x: hidden;
@@ -23,8 +23,8 @@ header {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background-color: 
-        linear-gradient((0%, var(--secondary)), var(--primary));
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: .1rem;
 }
 
 h1 {
@@ -32,7 +32,7 @@ h1 {
     font-size: clamp(3rem, 5vw, 200rem);
     font-weight: bold;
     line-height: 1.4em;
-    color: var(--dk-grey);
+    color: var(--primary);
 }
 
 h2 {
@@ -66,7 +66,7 @@ p {
     margin-bottom: 1em;
     line-height: 1.4em;
     color: white;
-    letter-spacing: .08em;
+    letter-spacing: .05em;
 }
 
 .p-quote {
@@ -77,7 +77,7 @@ p {
     margin-left: 0.5rem;
     line-height: 1.4em;
     color: var(--dk-grey);
-    letter-spacing: .08em;
+    letter-spacing: .05em;
     width: 50%;
 }
 
@@ -115,7 +115,7 @@ p {
 }
 
 .about-name {
-    color: var(--primary);
+    color: var(--dk-grey);
 }
 
 .header-link {
