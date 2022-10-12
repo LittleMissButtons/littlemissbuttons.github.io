@@ -1,7 +1,7 @@
 :root {
-    --primary: #FF1493;
-    --secondary: #FFFF60;
-    --tertiary: orange;
+    --primary:  #85552b;
+    --secondary: #eedbca;
+    --tertiary: #ac794d;
     --dk-grey: #333;
     --max-width: 960px;
     --spacing: 3rem;
@@ -11,6 +11,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--secondary);
     color: var(--dk-grey);
     overflow-x: hidden;
 }
@@ -22,6 +23,8 @@ header {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    background-color: 
+        linear-gradient((0%, var(--secondary)), var(--primary));
 }
 
 h1 {
@@ -80,7 +83,7 @@ p {
 
 /* helper classes */
 .neutral-theme {
-    background-color: white;
+    background-color: var(--secondary);
     --button-color: var(--primary);
     --button-hover-color: white;
 }
@@ -261,12 +264,12 @@ article {
 footer {
     padding: var(--spacing);
     text-align: center;
-    background-color: var(--dk-grey);
+    background-color: var(--primary);
     color: white;
 }
 
 .end-right {
-    border-bottom: 100px solid var(--dk-grey);
+    border-bottom: 100px solid var(--primary);
     border-left: 100vw solid transparent;
 }
 .social {
