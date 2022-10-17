@@ -66,7 +66,7 @@ p {
     margin-bottom: 1em;
     line-height: 1.4em;
     color: white;
-    letter-spacing: .05em;
+    letter-spacing: .04em;
 }
 
 .p-quote {
@@ -218,8 +218,7 @@ article {
 
 .toolkit {
     display: flex;
-    
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     max-width: var(--max-width);
@@ -231,14 +230,15 @@ article {
     color: white;  
 }
 
-.fa-brands:hover, .img-netlify:hover {
+.fa-brands:hover, .img-icons:hover {
     transition: all 0.6s ease-in-out;
     transform: scale(1.4);
 }
 
-.img-netlify {
+.img-icons {
     width: 4rem;
     height: 4rem;
+    margin: 1rem;
 }
 
 .contact {
