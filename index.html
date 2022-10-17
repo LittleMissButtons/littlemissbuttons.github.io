@@ -3,20 +3,22 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Improves mobile display-->
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
     <!--TODO: Insert dark mode css !-->
     <link rel="icon" href="/images/skate.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/7c3c8ccc14.js" crossorigin="anonymous"></script>
-    <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fredericka+the+Great&family=Sorts+Mill+Goudy:ital@0;1&family=Ubuntu:ital,wght@0,300;1,300&family=Vidaloka&display=swap" rel="stylesheet">
+    <title>My Portfolio</title>
 </head>
 <body>
     <header>
         <h1>Hi there, my name is <span class="about-name">Alexis Pendleton</span><br>I'm more than just a Web Developer.</h1>
-        <a href="#about-me" class="header-link button" aria-label="Clink this to be transfered to the about me section of this website">Find out more</a> <!--copied styling from example-->
+        <a href="#about-me" class="header-link button" aria-label="Click this to be transferred to the about me section of this website">Find out more</a> <!--copied styling from example-->
     </header>
 
     <main>
@@ -26,35 +28,37 @@
         <div class="about-container">
             <img src="/images/Profile-Beenie.jpg" class="photo" alt="photograph of Alexis">
             <div class="about-text">
-                <!--TODO:--><p>I believe that there is so much more to a person than just their coding skills. Being responsible for managing a critical department meant that I was also solely in charge of hiring the staff for my department. ........what i would look for ........</p>
-                <!--TODO:--><p>.......what i offer in relation to other skills.........</p> 
-                <!--TODO:--><p>Oh, and I also do web development too. One of my passions as a developer lies in raising the bar with accessibility which currently plauges the majority of web sites.</p>
+                <!--TODO:--><p>I believe that there is so much more to a person than just their coding skills...go on to explain what i offer in relation to other soft skills and why its important  </p>
+                <!--TODO:--><p>Oh, and I also do web development too. One of my passions as a developer lies in raising the bar with accessibility which currently plages the majority of web sites.</p>
                 <!--TODO:--><p>............consider snapshot of me/interests as a person...........</p>
             </div>    
         </div>
         <blockquote>"Failure is part of the process"<br><cite>Michelle Obama</cite></blockquote>
-        <p class="p-quote"><br>I like this quote because in coding you will often encounter stages of failure and it is perseverance that makes a coder succeed...that and a little bit of help from Google.</p>
+        <p class="p-quote"><br>I like this quote because in coding you will often encounter stages of failure and it is perseverance key for a coder to succeed...that and a little bit of help from Google.</p>
         </section>
 <!--Next Section-->
         <section id="projects" class="projects neutral-theme">
             <h2>Projects</h2>
-            <article>
+                        <article>
                 <h3 class="h3-projects">My Portfolio</h3>
                 <p class="p-projects">This was my first project made during the Front End Foxes cohort classes. I really enjoyed making this site to show off work that I am proud of. </p>
                 <img class="img-project" src="/images/Portfolio.png" alt="screenshot of my first project which this this Portfolio website">
                 <!-- TODO:add link for 'See It Live' and GitHub -->
+                <!-- TODO:change layout so have display as a switching card on hover or something. Front picture Back written info. plus above links-->
             </article>
             <article>
                 <h3 class="h3-projects">Terrarium</h3>
-                <p class="p-projects">This project is a demonstation of responsive wed design utilising HTML, CSS and Javascript. This was then deployed to Netlify through my GitHub repositories.</p>
+                <p class="p-projects">This project is a demonstration of responsive wed design utilising HTML, CSS and Javascript. This was then deployed to Netlify through my GitHub repositories.</p>
                 <img class="img-project" src="/images/terrarium.png" alt="screenshot of my second project which was a">
                 <!-- TODO:add link for 'See It Live' and GitHub -->
+                <!-- TODO:change layout so have display as a switching card on hover or something. Front picture Back written info. plus above links-->
             </article>
             <article>
-                <h3 class="h3-projects">Project name</h3>
-                <p class="p-projects">This was my third project made during the FeF classes</p>
-                <img class="img-project" src="/images/project-icon.jpg" alt="screenshot of my third project which was a">
+                <h3 class="h3-projects">Open Source Contributions</h3>
+                <p class="p-projects">When rectifying an issue openly published on GitHub regarding hidden buttons stuck behind the header, I also notice many HTML syntax errors and lack of accessibility. <br>I fixed the errors, improved accessibility and syntax which inturn increased SEO visibility. Incorperated back into master branch through an approved pull request.</p>
+                <img class="img-project" src="/images/codingBooks.png" alt="screenshot of my third project which was a an open source contribution to 'CodingBooks' website">
                 <!-- TODO:add link for 'See It Live' and GitHub -->
+                <!-- TODO:change layout so have display as a switching card on hover or something. Front picture Back written info. plus above links-->
             </article>
         </section>
         <section id="toolkit" class="contact about primary-theme">
@@ -62,7 +66,7 @@
         <div class="toolkit">
             <!--<i class="fa-solid fa-code fa-2x"> can't decide whether I want this -->
             </i><i class="fa-brands fa-html5 fa-4x"></i></a><i class="fa-brands fa-css3-alt fa-4x"></i><i class="fa-brands fa-square-js fa-4x"></i><i class="fa-brands fa-github fa-4x"></i>
-            <img class="img-icons" src="/images/netlify2.png"><img class="img-icons" src="/images/vscode.png"><i class="fa-brands fa-ubuntu fa-4x"></i>
+            <img class="img-icons" src="/images/netlify2.png" alt="Netlify Logo"><img class="img-icons" src="/images/vscode.png" alt="VSCode Logo"><i class="fa-brands fa-ubuntu fa-4x"></i>
             <!--<i class="fa-solid fa-code fa-2x"> can't decide whether I want this -->
         </div>
         </section>
@@ -77,7 +81,7 @@
 <!--Next Section-->
     <footer>
         <a href="@Lil_MissButtons" aria-label="Check out my Twitter feed by following this link"><i class="fa-brands fa-twitter fa-4x"></i></a><a href="https://github.com/LittleMissButtons" aria-label="Check out my GitHub repositories and details by following this link"><i class="fa-brands fa-github fa-4x"></i></a><a href="https://www.linkedin.com/in/alexis-jayne-pendleton" aria-label="Check out my LinkedIn details by following this link"><i class="fa-brands fa-linkedin fa-4x"></i></a>
-        <p><br></bk>Website design by Alexis Pendleton</p><!-- Portfolio designed by footer text -->
+        <p><br></bk>Website design by Alexis Pendleton</p>
     </footer>    
 </body>
 </html>
