@@ -1,13 +1,25 @@
 :root {
     --primary:  #85552b;
     --secondary: #eedbca;
-    --tertiary: #ac794d;
+    --tertiary: #85a074;
     --dk-grey: rgb(43, 42, 42);
     --max-width: 960px;
     --spacing: 3rem;
 }
 
-/* generic styles */
+.light-mode {
+    --primary:  #85552b;
+    --secondary: #eedbca;
+    --tertiary: #85a074;
+    --dk-grey: rgb(43, 42, 42);
+}
+
+.dark-mode {
+    --primary:  #331800;
+    --secondary: #683102;
+    --tertiary: #173801;
+    --dk-grey: white;
+}
 
 body {
     font-family: 'Ubuntu', sans-serif;
@@ -41,13 +53,15 @@ h2 {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 0.15rem;
 }
 
 h3 {
     margin-right: .5rem;
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: bold;
     width: 25%;
+    letter-spacing: 0.1rem;
 }
 
 h4 {
@@ -56,6 +70,7 @@ h4 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.8rem;
+    letter-spacing: 0.1rem;
 }
 
 section {
@@ -64,11 +79,22 @@ section {
 }
 
 p {
+    display: flex;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto var(--spacing);
     margin-bottom: 1em;
     line-height: 1.4em;
     color: white;
     letter-spacing: .04em;
     font-size: 1em;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto var(--spacing);
 }
 
 .p-quote {
@@ -82,11 +108,7 @@ p {
     width: 50%;
 }
 
-.p-card {
-    color: var(--dk-grey);
-}
 
-/* helper classes */
 .neutral-theme {
     background-color: var(--secondary);
     --button-color: var(--primary);
@@ -204,13 +226,6 @@ cite {
     font-style: normal;
 }
 
-article {
-    display: flex;
-    align-items: center;
-    max-width: var(--max-width);
-    margin: 0 auto var(--spacing);
-}
-
 .img-project {
     display: block;
     margin-left: 1rem;
@@ -221,7 +236,6 @@ article {
     height: 30%;
 }
 
-/*copy from here*/
 .card-gallery {
     display: flex;
     flex-direction: row;
@@ -233,7 +247,7 @@ article {
     margin: 0 auto;
     padding: 10px 10px;
   }
-  /*flipcard content here*/
+
   .card {
     width: 320px;
     height: 370px;
@@ -255,12 +269,15 @@ article {
     line-height: 1.1em;
   }
 
-  
+  .p-card {
+    color: var(--dk-grey);
+  }
+
   .card-front {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #85552b;
+    background-color: var(--primary);
     line-height: 1.4em;
     color: white;
     letter-spacing: .04em;
@@ -270,13 +287,30 @@ article {
     backface-visibility: hidden;
   }
   
+  .card-background {
+    position: relative;
+    background-color: var(--secondary);
+    height: 80%;
+    width: 90%;
+    left: 5%;
+    border-radius: 0.5rem;
+  }
+
+/*.card-button {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    align-self: auto;
+    bottom: 5%;
+}*/
+
   .card-back {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #eedbca;
+    background-color: var(--tertiary);
     line-height: 1.4em;
-    color: rgb(43, 42, 42);
+    color: var(--dk-grey);
     letter-spacing: .04em;
     text-align: center;
     font-size: 1rem;
@@ -293,8 +327,6 @@ article {
     border-radius: 0.8rem;
   }
   
-  /*flipcard content ends*/
-
 .toolkit {
     display: flex;
         flex-wrap: wrap;
@@ -337,12 +369,13 @@ article {
 }
 
 .p-contact {
-    color: #333;
+    color: var(--dk-grey);
 }
 
 footer {
     padding: var(--spacing);
     text-align: center;
+    justify-self: center;
     background-color: var(--primary);
     color: white;
 }
@@ -386,3 +419,30 @@ footer {
     }
 }
 
+#theme-switch {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 3;
+    color: var(--white);
+    background-color: var(--tertiary);
+}
+
+#theme-switch:hover {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    --primary:  #331800;
+    --secondary: #683102;
+    --tertiary: #173801;
+    --dk-grey: white;
+  }
+
+@media (prefers-color-scheme: light) {
+    /--primary:  #85552b;
+    --secondary: #eedbca;
+    --tertiary: #85a074;
+    --dk-grey: rgb(43, 42, 42);
+  }

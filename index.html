@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
-    <!--TODO: Insert dark mode css !-->
+    <script src="dark-mode.js" defer></script>
     <link rel="icon" href="/images/skate.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/7c3c8ccc14.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Fredericka+the+Great&family=Sorts+Mill+Goudy:ital@0;1&family=Ubuntu:ital,wght@0,300;1,300&family=Vidaloka&display=swap" rel="stylesheet">
     <title>My Portfolio</title>
 </head>
-<body>
+<body class="light-mode">
+    <button id="theme-switch" class="theme-button">Dark Mode</button> 
     <header>
         <h1>Hi there, my name is <span class="about-name">Alexis Pendleton</span><br>I'm more than just a Web Developer.</h1>
         <a href="#about-me" class="header-link button" aria-label="Click this to be transferred to the about me section of this website">Find out more</a> <!--copied styling from example-->
@@ -36,83 +36,92 @@
         <blockquote>"Failure is part of the process"<br><cite>Michelle Obama</cite></blockquote>
         <p class="p-quote"><br>I like this quote because in coding you will often encounter stages of failure and it is perseverance key for a coder to succeed...that and a little bit of help from Google.</p>
         </section>
-
-
-<!--Flipcard gallery inserted-->
-<section id="projects" class="projects neutral-theme">
-    <h2>Projects</h2>
-    <section class="card-gallery">
-        <div class="card">
-          <div class="card-front">
-            <h3 class="h3-card">Portfolio</h3>
-            <img class="card-img" src="/images/portfolio.png" alt="screenshot of my first project which this this Portfolio website">
-          </div>
-          <div class="card-back">
-            <h3 class="h3-card">Portfolio</h3>
-              <p class="p-card">This is my portfolio site and was produced during my coding cohort with 'Front End Foxes'. I really enjoyed making this site to show off work that I am proud of and demonstrate how my skills have improved.</p>
-              <a href="#" class="button card-button">My Resume</a>
-              <a href="https://github.com/LittleMissButtons/littlemissbuttons.github.io" class="button card-button">GitHub</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-front">
-            <h3 class="h3-card">Terrarium</h3>
-            <img class="card-img" src="/images/terrarium.png" alt="screenshot of my second project which was a">
-          </div>
-          <div class="card-back">
-            <h3 class="h3-card">Terrarium</h3>
-              <p class="p-card">This project is a demonstration of responsive wed design utilising HTML, CSS and Javascript. This was then deployed to Netlify through my GitHub repositories.</p>
-              <a href="https://prismatic-alfajores-1d41a3.netlify.app/" class="button">See It Live</a>
-              <a href="https://github.com/LittleMissButtons/Terrarium" class="button">GitHub</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-front">
-            <h3 class="h3-card">Open Source Work</h3>
-            <img class="card-img" src="/images/codingBooks.png">
-          </div>
-          <div class="card-back">
-            <h3 class="h3-card">Open Source Work</h3>
-              <p class="p-card">When rectifying an issue openly published on GitHub regarding hidden buttons stuck behind the header, I also noticed many HTML syntax errors and lack of accessibility. <br>I fixed the errors, improved accessibility and syntax which inturn increased SEO visibility. Incorperated back into master branch through an approved pull request.</p>
-              <a href="https://codingbooks.netlify.app/" class="button">See It Live</a>
-              <a href="https://github.com/LittleMissButtons/CodingBooks" class="button">GitHub</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-front">
-            <h3 class="h3-card">Bowie Tribute Page</h3>
-            <img class="card-img" src="/images/bowie.png">
-          </div>
-          <div class="card-back">
-            <h3 class="h3-card">Bowie Tribute Page</h3>
-              <p class="p-card">This is my portfolio site and was produced during my coding cohort with 'Front End Foxes'. I really enjoyed making this site to show off work that I am proud of and demonstrate how my skills have improved.</p>
-              <a href="https://github.com/LittleMissButtons/FCC_Bowie" class="button">GitHub</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-front">
-            <h3 class="h3-card">Interactive Form</h3>
-            <img class="card-img" src="/images/form.png">
-          </div>
-          <div class="card-back">
-            <h3 class="h3-card">Interactive Form</h3>
-              <p class="p-card">This is my portfolio site and was produced during my coding cohort with 'Front End Foxes'. I really enjoyed making this site to show off work that I am proud of and demonstrate how my skills have improved.</p>
-              <a href="https://github.com/LittleMissButtons/FFC_Cert_Survey_Form" class="button">GitHub</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-front">
-            <h3 class="h3-card">Technical Document</h3>
-            <img class="card-img" src="/images/techDoc.png">
-          </div>
-          <div class="card-back">
-            <h3 class="h3-card">Technical Document</h3>
-              <p class="p-card">This is my portfolio site and was produced during my coding cohort with 'Front End Foxes'. I really enjoyed making this site to show off work that I am proud of and demonstrate how my skills have improved.</p>
-              <a href="https://github.com/LittleMissButtons/fcc-recipe" class="button">GitHub</a>
-          </div>
-        </div>    
-      </section> <!-- Gallery div-->
-</section>
+        <section id="projects" class="projects neutral-theme">
+            <h2>Projects</h2>
+            <section class="card-gallery">
+                <div class="card">
+                  <div class="card-front">
+                    <h3 class="h3-card">Portfolio</h3>
+                    <img class="card-img" src="/images/portfolio.png" alt="screenshot of my first project which this this Portfolio website">
+                  </div>
+                  <div class="card-back">
+                    <h3 class="h3-card">Portfolio</h3>
+                    <div class="card-background">
+                      <p class="p-card">This is my portfolio site and was produced during my coding cohort with 'Front End Foxes'. I really enjoyed making this site to show off work that I am proud of and demonstrate how my skills have improved.</p>
+                      <a href="#" class="button card-button">My Resume</a>
+                      <a href="https://github.com/LittleMissButtons/littlemissbuttons.github.io" class="button card-button">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-front">
+                    <h3 class="h3-card">Terrarium</h3>
+                    <img class="card-img" src="/images/terrarium.png" alt="screenshot of my second project which was a">
+                  </div>
+                  <div class="card-back">
+                    <h3 class="h3-card">Terrarium</h3>
+                    <div class="card-background">  
+                      <p class="p-card">This project is a demonstration of responsive wed design utilising HTML, CSS and Javascript. This was then deployed to Netlify through my GitHub repositories.</p>
+                      <a href="https://prismatic-alfajores-1d41a3.netlify.app/" class="button">See It Live</a>
+                      <a href="https://github.com/LittleMissButtons/Terrarium" class="button">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-front">
+                    <h3 class="h3-card">Open Source Work</h3>
+                    <img class="card-img" src="/images/codingBooks.png">
+                  </div>
+                  <div class="card-back">
+                    <h3 class="h3-card">Open Source Work</h3>
+                    <div class="card-background">
+                      <p class="p-card">Whilst rectifying an issue from GitHub regards hidden buttons stuck behind the header. Noticed many HTML syntax errors and lacking accessibility. Fixed the errors, improved accessibility, syntax and increased SEO visibility. Incorperated back into master branch through an approved pull request.</p>
+                      <a href="https://codingbooks.netlify.app/" class="button">See It Live</a>
+                      <a href="https://github.com/LittleMissButtons/CodingBooks" class="button">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-front">
+                    <h3 class="h3-card">Bowie Tribute</h3>
+                    <img class="card-img" src="/images/bowie.png">
+                  </div>
+                  <div class="card-back">
+                    <h3 class="h3-card">Bowie Tribute</h3>
+                    <div class="card-background">
+                      <p class="p-card">This was my first web page that I made. A David Bowie tribute page. I love to see how much improvement I have made in my skills with site such as this Portfolio site.</p>
+                      <a href="https://github.com/LittleMissButtons/FCC_Bowie" class="button">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-front">
+                    <h3 class="h3-card">Interactive Form</h3>
+                    <img class="card-img" src="/images/form.png">
+                  </div>
+                  <div class="card-back">
+                    <h3 class="h3-card">Interactive Form</h3>
+                    <div class="card-background">
+                      <p class="p-card">This was a survey form that I produced which included for various input methods from the user with a submission button at the end.</p>
+                      <a href="https://github.com/LittleMissButtons/FFC_Cert_Survey_Form" class="button">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-front">
+                    <h3 class="h3-card">Technical Document</h3>
+                    <img class="card-img" src="/images/techDoc.png">
+                  </div>
+                  <div class="card-back">
+                    <h3 class="h3-card">Technical Document</h3>
+                    <div class="card-background">  
+                      <p class="p-card">This was a project I had to complete independantly for a Technical Document style page and I liked the idea of using it in a different context. Therefore this is a rescipe page with full NavBar links to each section and an easy to read layout.</p>
+                      <a href="https://github.com/LittleMissButtons/fcc-recipe" class="button">GitHub</a>
+                    </div>
+                  </div>
+                </div>    
+              </section> <!-- Gallery div-->
+        </section>
        <section id="toolkit" class="contact about primary-theme">
         <h2>MY TOOLKIT</h2>
         <div class="toolkit">
